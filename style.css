@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient( 50deg, hsl(227, 52%, 11%), hsl(227, 37%, 20%) 50% ,  hsl(227, 52%, 11%));
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vh;
+    
+}
+/* SCORE --------*/
+.score {
+    border: 1px solid white;
+    height: 100px;
+    width: 500px;
+    display: flex;
+    border-radius: 10px;
+    margin-left: 450px;
+    margin-top: 20px;
+}
+.RPS {
+    font-size: 28PX;
+    margin-top: 8px;
+    margin-left: 10px;
+    line-height: 1;
+}
+.points {
+    background-color: white;
+    color: hsl(227, 52%, 11%) ;
+    height: 80px;
+    width: 100px;
+    display: grid;
+    place-content: center;
+    border-radius: 10px;
+    margin-left: 260px;
+    margin-top: 8px;
+    
+}
+.numberP {
+    font-size: 40px;
+}
+/* MAIN */
+.triangle {
+    margin-top: 200px;
+    margin-left: 580px;
+
+    height: 200px;
+}
+main {
+    margin-top: -40px;
+}
+button {
+    background-color: white;
+    border: 10px solid blue;
+    border-radius: 100%;
+    height: 120px;
+    width: 120px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    position: absolute;
+    
+}
+.buttons1 {
+    border: 10px solid hsl(230, 89%, 62%);
+    margin-left: 550px;
+    margin-top: -250px;
+    animation:  button-enter 2s  linear ;
+}
+.buttons3 {
+    border: 10px solid hsl(349, 71%, 52%);
+    margin-left: 640px;
+    margin-top: -80px;
+    animation:  button-red 2s  linear ;
+}
+.buttons2 {
+    border: 10px solid hsl(39, 89%, 49%) ;
+    margin-left: 720px;
+    margin-top: -250px;
+    animation:  button-enter 2s  linear ;
+
+}
+.rules {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: transparent !important;
+    color: white;
+    position: absolute;
+    margin-left: 1200px;
+    margin-top: 50px;
+
+}
+@keyframes button-enter {
+    0% {
+        margin-top: 250px; 
+    }
+    
+    100% {
+        margin-top: -250px; 
+    }
+}
+@keyframes button-red {
+    0% {
+        margin-top: 250px; 
+    }
+    
+    100% {
+        margin-top: -80px;
+    }
+}

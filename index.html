@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
@@ -8,30 +9,59 @@
   
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
 
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  
+</head>
+<body>
+<header>
+  <!--FIRST SOCORE-->
+  <div class="score">
+    <p class="RPS">
+      ROCK  <br>
+      PAPER <br> 
+      SCISSORS <br>
+    </p>
+    <div class=" points">
+      SCORE <br>
+      <span class="numberP">
+        12
+      </span>
+    </div>
   </div>
+   
+  
+    <!--You Picked
+    The House Picked
+  
+    You Win
+    You Lose
+  
+    Play Again-->
+</header>
+<!--icons-->
+<main>
+  
+  <div class="things">
+    <img src="images/bg-triangle.svg" class="triangle">
+    <button class="buttons1">
+      <img src="images/icon-paper.svg" alt="">
+    </button>
+    <button class="buttons2">
+      <img src="images/icon-scissors.svg" alt="">
+    </input>
+    <button class="buttons3">
+      <img src="images/icon-rock.svg" alt="">
+    </button>
+  </div>
+  <button class="rules" onclick="windowRules()">
+    RULES
+  </button>
+</main>
+  
+ 
 </body>
+<script src="index.js">
+
+</script>
 </html>
