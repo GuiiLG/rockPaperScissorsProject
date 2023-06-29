@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 body {
     background-image: linear-gradient( 50deg, hsl(227, 52%, 11%), hsl(227, 37%, 20%) 50% ,  hsl(227, 52%, 11%));
@@ -11,6 +12,7 @@ body {
     overflow: hidden;
     height: 100vh;
     width: 100vh;
+    
     
 }
 /* SCORE --------*/
@@ -51,7 +53,7 @@ body {
 
     height: 200px;
 }
-main {
+main.firstPart {
     margin-top: -40px;
 }
 button {
@@ -64,7 +66,12 @@ button {
     place-content: center;
     cursor: pointer;
     position: absolute;
+    transition: transform 0.2s ease;
     
+    
+}
+button:hover {
+    transform:  translate(3px, -3px);
 }
 .buttons1 {
     border: 10px solid hsl(230, 89%, 62%);
@@ -85,18 +92,16 @@ button {
     animation:  button-enter 2s  linear ;
 
 }
-.rules {
-    border: 1px solid white;
-    border-radius: 10px;
-    width: 100px;
-    height: 50px;
-    background-color: transparent !important;
-    color: white;
-    position: absolute;
-    margin-left: 1200px;
-    margin-top: 50px;
-
+@keyframes button-hover {
+    0% {
+        margin-top: -250px; 
+    }
+    100% {
+        margin-top: -260px;
+    }
+    
 }
+
 @keyframes button-enter {
     0% {
         margin-top: 250px; 
@@ -115,3 +120,171 @@ button {
         margin-top: -80px;
     }
 }
+/*RULESSSS */
+.rules {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: transparent !important;
+    color: white;
+    position: absolute;
+    margin-left: 1200px;
+    margin-top: 50px;
+    position: absolute;
+
+}
+.windowRules {
+    display: none;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    height: 400px;
+    width: 400px;
+    position: fixed !important;
+    z-index: 9999;
+    margin-top: -400px;
+    margin-left: 500px;
+    color: gray !important;
+
+
+}
+p.rulesP {
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 25px;
+}
+img.rulesIMG {
+    margin-top: 70px;
+    margin-left: 45px;
+}
+.menuRULES {
+    display: flex !important;
+}
+.X {
+    margin-left: 280px;
+    margin-top: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+  }
+  
+  /*SECOND PART */
+  .secondPart {
+    display: none;
+  }
+   .buttons3SECOND {
+    display: none !important;
+  }
+  .buttons1SECOND {
+    border: 20px solid hsl(230, 89%, 62%);
+    margin-left: 300px;
+    margin-top: 200px; 
+    height: 250px;
+    width: 250px;
+    animation: toleft 1s linear;
+    box-shadow:  0 0 0 30px hsl(226, 42%, 24%), 0 0 0 60px hsl(224, 44%, 20%), 0 0 0 120px hsl(223, 45%, 17%);
+    z-index: -1;
+  }
+  img.rock, img.scissors, img.paper {
+    height: 100px;
+  }
+  .buttons2SECOND {
+    border: 20px solid hsl(349, 71%, 52%);
+    margin-left: 850px;
+    margin-top: 200px;
+    height: 250px;
+    width: 250px;
+    animation: toright 1s linear;
+    
+
+  }
+  
+  .win {
+    font-size: 30px;
+    margin-left: 650px;
+    margin-top: 300px;
+    position: absolute !important;
+    animation: transparentWIN 1s linear;
+  }
+  @keyframes toleft {
+    0% {
+        margin-left: 410px;
+    }
+    100% {
+        margin-left: 300px;
+    }
+  }
+  @keyframes toright {
+    0% {
+        margin-left: 740px;
+    }
+    100% {
+        margin-left: 850px;
+    }
+  }
+  .playAGAIN {
+    background-color: white;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    color: hsl(227, 52%, 11%);
+    display: grid;
+    place-content: center;
+    margin-left: 600px;
+    margin-top: 370px;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    animation: transparentBUTTON 1s linear;
+  }
+  .playAGAIN:hover {
+    transform: translate(3px, -3px)
+  }
+  
+  @keyframes transparentWIN {
+    0% {
+        opacity: 0;
+        color: transparent ;
+        
+    }
+    100% {
+        opacity: 1;
+        color: white;
+        
+    }
+  }
+  @keyframes transparentBUTTON {
+    0% {
+        opacity: 0;
+        background-color: transparent ;
+        color: transparent ;
+    }
+    100% {
+        opacity: 1;
+        background-color: white;
+        color: hsl(227, 52%, 11%);
+    }
+  }
+  .yourchoice, .housechoice {
+    position: absolute;
+    margin-top: 150px;
+    font-size: 20px;
+
+  }
+  .yourchoice {
+    margin-left: 370px;
+    animation: transparentWIN 1s linear;
+  }
+  .housechoice {
+    margin-left: 890px;
+    animation: transparentWIN 1s linear;
+  }

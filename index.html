@@ -40,24 +40,62 @@
     Play Again-->
 </header>
 <!--icons-->
-<main>
+<main class="firstPart">
   
   <div class="things">
     <img src="images/bg-triangle.svg" class="triangle">
-    <button class="buttons1">
+    <button class="buttons1" onclick="RPS('paper')">
       <img src="images/icon-paper.svg" alt="">
     </button>
-    <button class="buttons2">
-      <img src="images/icon-scissors.svg" alt="">
+    <button class="buttons2" onclick="RPS('scissors')">
+      <img src="images/icon-scissors.svg" >
     </input>
-    <button class="buttons3">
+    <button class="buttons3" onclick="RPS('rock')">
       <img src="images/icon-rock.svg" alt="">
     </button>
   </div>
-  <button class="rules" onclick="windowRules()">
+  <button class="rules" onclick="windowRulesOPEN()">
     RULES
   </button>
+  
 </main>
+<main class="secondPart">
+  <p class="win">
+    YOU WIN
+  </p>
+  <p class="yourchoice">
+    YOU PICKED
+  </p>
+  <p class="housechoice">
+    THE HOUSE PICKED
+  </p>
+    <div class="playAGAIN" onclick="playAgain()">
+      PLAY AGAIN
+    </div>
+    <button class="buttons1SECOND" onclick="RPS('paper')">
+    <img src="images/icon-paper.svg" class="paper">
+  </button>
+  <button class="buttons2SECOND" onclick="RPS('scissors')">
+    <img src="images/icon-scissors.svg" class="scissors" >
+  </input>
+  <button class="buttons3SECOND" onclick="RPS('rock')">
+    <img src="images/icon-rock.svg" class="rock">
+  
+</main>
+
+<footer>
+  <div class="windowRules">
+    <div class="menuRULES">
+      <p class="rulesP">
+        RULES 
+      </p>
+      <img src="images/icon-close.svg" class="X" onclick="closeRULES()">
+    </div>
+    <img src="images/image-rules.svg" class="rulesIMG">
+  </div>
+  <div class="modal-overlay"></div>
+</footer>
+
   
  
 </body>
