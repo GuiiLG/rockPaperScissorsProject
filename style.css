@@ -45,13 +45,15 @@ body {
 }
 .numberP {
     font-size: 40px;
+    margin-left: 12px;
 }
 /* MAIN */
 .triangle {
-    margin-top: 200px;
-    margin-left: 580px;
+    margin-top: 150px;
+    margin-left: 550px;
+    height:  300px;
 
-    height: 200px;
+    
 }
 main.firstPart {
     margin-top: -40px;
@@ -66,30 +68,36 @@ button {
     place-content: center;
     cursor: pointer;
     position: absolute;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease !important;
     
     
 }
 button:hover {
-    transform:  translate(3px, -3px);
+    transform:  translate(3px, -3px) !important;
 }
 .buttons1 {
     border: 10px solid hsl(230, 89%, 62%);
-    margin-left: 550px;
-    margin-top: -250px;
-    animation:  button-enter 2s  linear ;
+    margin-left: 500px;
+    margin-top: -350px;
+    height: 150px;
+    width: 150px;
+    
 }
 .buttons3 {
     border: 10px solid hsl(349, 71%, 52%);
-    margin-left: 640px;
+    margin-left: 650px;
     margin-top: -80px;
-    animation:  button-red 2s  linear ;
+    height: 150px;
+    width: 150px;
+    
 }
 .buttons2 {
     border: 10px solid hsl(39, 89%, 49%) ;
-    margin-left: 720px;
-    margin-top: -250px;
-    animation:  button-enter 2s  linear ;
+    margin-left: 780px;
+    margin-top: -350px;
+    height: 150px;
+    width: 150px;
+    
 
 }
 @keyframes button-hover {
@@ -181,31 +189,120 @@ img.rulesIMG {
   .secondPart {
     display: none;
   }
-   .buttons3SECOND {
-    display: none !important;
-  }
-  .buttons1SECOND {
+  .buttonRight {
     border: 20px solid hsl(230, 89%, 62%);
-    margin-left: 300px;
-    margin-top: 200px; 
-    height: 250px;
-    width: 250px;
-    animation: toleft 1s linear;
-    box-shadow:  0 0 0 30px hsl(226, 42%, 24%), 0 0 0 60px hsl(224, 44%, 20%), 0 0 0 120px hsl(223, 45%, 17%);
+    margin-left: 300px ;
+    margin-top: 200px ; 
+    height: 250px ;
+    width: 250px ;
+    animation: toleft 1s linear, box-shadowTRANSITION 1s linear ;
+    box-shadow:  0 0 0 40px hsla(226, 43%, 24%, 0.555), 0 0 0 100px hsla(224, 46%, 18%, 0.932), 0 0 0 200px hsla(223, 45%, 17%, 0.699);
     z-index: -1;
+    
   }
-  img.rock, img.scissors, img.paper {
-    height: 100px;
-  }
-  .buttons2SECOND {
-    border: 20px solid hsl(349, 71%, 52%);
+  
+  .buttonLeft {
+    border: 20px solid hsl(349, 71%, 52%) ;
     margin-left: 850px;
     margin-top: 200px;
     height: 250px;
     width: 250px;
     animation: toright 1s linear;
+    box-shadow: 0 10px 0px -105px rgba(5, 5, 5, 0.753);
     
+  }
 
+
+  /* CLASSLIST BUTTONS */
+  .buttonROCKLEFT {
+    border: 20px solid hsl(349, 71%, 52%) ;
+    margin-left: 850px;
+    margin-top: 200px;
+    height: 250px;
+    width: 250px;
+    animation: toright 1s linear;
+    box-shadow: 0 10px 0px -105px rgba(5, 5, 5, 0.753);
+    z-index: -3;
+  }
+  .buttonSCISSORLEFT {
+    border: 20px solid hsl(39, 89%, 49%) ; ;
+    margin-left: 850px;
+    margin-top: 200px;
+    height: 250px;
+    width: 250px;
+    animation: toright 1s linear;
+    box-shadow: 0 10px 0px -105px rgba(5, 5, 5, 0.753);
+    z-index: -3;
+  }
+  .selected {
+    border-color:hsl(39, 89%, 49%) ; ;
+  }
+  .buttonPAPERLEFT {
+    border: 20px solid hsl(230, 89%, 62%);
+    margin-left: 850px;
+    margin-top: 200px;
+    height: 250px;
+    width: 250px;
+    animation: toright 1s linear;
+    box-shadow: 0 10px 0px -105px rgba(5, 5, 5, 0.753);
+    z-index: -3;
+  }
+
+  .buttonROCKRIGHT {
+    border: 20px solid hsl(349, 71%, 52%) ;
+    margin-left: 300px ;
+    margin-top: 200px ; 
+    height: 250px;
+    width: 250px;
+    animation: toleft 1s linear;
+    box-shadow: 0 10px 0px -105px rgba(5, 5, 5, 0.753);
+    z-index: -3;
+  }
+  .buttonSCISSORSRIGHT {
+    border: 20px solid hsl(39, 89%, 49%) ; ;
+    margin-left: 300px ;
+    margin-top: 200px ; 
+    height: 250px;
+    width: 250px;
+    animation: toleft 1s linear;
+    box-shadow: 0 10px 0px -105px rgba(5, 5, 5, 0.753);
+    z-index: -3;
+  }
+  .buttonPAPERRIGHT {
+    border: 20px solid hsl(230, 89%, 62%);
+    margin-left: 300px ;
+    margin-top: 200px ; 
+    height: 250px;
+    width: 250px;
+    animation: toleft 1s linear;
+    box-shadow: 0 10px 0px -105px rgba(5, 5, 5, 0.753);
+    z-index: -3;
+  }
+  img.rockL, img.scissorsL, img.paperL, img.rockR, img.scissorsR, img.paperR{
+    display: none;
+    height: 100px;
+  }
+  
+  .buttons {
+    
+    border: 20px solid hsl(39, 89%, 49%) ;
+    margin-left: 850px;
+    margin-top: 200px;
+    height: 250px;
+    width: 250px;
+    animation: toright 1s linear;
+    box-shadow: 0 10px 0px -105px rgba(5, 5, 5, 0.753);
+    
+  }
+  
+  @keyframes box-shadowTRANSITION {
+    0% {
+        box-shadow: 0 10px 0px -105px rgba(5, 5, 5, 0.753);
+    }
+    100% {
+        
+        box-shadow: transparent;
+    }
   }
   
   .win {
